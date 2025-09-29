@@ -3,116 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mijn Eerste Website</title>
-  <style>
-    .about-button 
-    {
-      background: none;
-      color: rgb(0, 0, 0);
-      border: none;
-      border-radius: 25px;
-      font-size: 20px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: opacity 0.2s;
-      margin-left: 2.5px;
-      margin-right: 2.5px;
-      box-shadow: -5px 5px 0 rgba(88, 88, 88, 0.1);
-      vertical-align: top;
-    }
-
-    .about-button:hover
-    {
-      opacity: 0.7;
-    }
-
-    .about-button:active
-    {
-      opacity: 0.3;
-    }
-
-    .GitHub-button
-    {
-      background: none;
-      color: rgb(0, 0, 0);
-      border: none;
-      border-radius: 25px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-size: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: opacity 0.2s, box-shadow 0.2s;
-      margin-left: 2.5px;
-      margin-right: 2.5px;
-      box-shadow: -5px 5px 0 rgb(88, 88, 88, 0.1);
-      vertical-align: top;
-    }
-
-    .GitHub-button:hover
-    {
-      opacity: 0.7;
-    }
-
-    .GitHub-button:active
-    {
-      opacity: 0.3;
-    }
-
-    .header
-    {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    
-    .left-buttons
-    {
-      display: flex;
-      gap: 10px;
-    }
-
-    .title-block
-    {
-      text-align: center;
-    }
-
-    .title
-    {
-      font-family: Arial;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      flex: 1;
-    }
-
-    .made-text
-    {
-      font-family: Arial;
-      font-size: 10px;
-      font-weight: bold;
-      margin: 5px 0 0 0;
-    }
-  </style>
+  <title>Mijn Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
-    <div class="left-buttons">
-      <button class="about-button">ABOUT</button>
-      <button class="GitHub-button">GITHUB</button>
-    </div>
+  <header>
+    <h1>👋 Hoi, ik ben [Jouw Naam]</h1>
+    <p>Python developer | Hobbyist | Maker</p>
+    <nav>
+      <a href="#about">Over mij</a>
+      <a href="#projects">Projecten</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <div class="title-block">
-      <p class="title">&#183; Welcome on my first website! &#183;</p>
-      <p class="made-text">Made By Nick</p>
+  <section id="about">
+    <h2>Over mij</h2>
+    <p>Ik ben een enthousiaste developer die graag met Python en webontwikkeling bezig is. 
+    Op deze pagina vind je een paar van mijn projecten.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projecten</h2>
+    <div class="card">
+      <h3>Voorbeeld Python Script</h3>
+      <pre><code>
+import random
+
+def greet():
+    woorden = ["Hallo!", "Hey!", "Welkom!", "Yo!"]
+    return random.choice(woorden)
+
+print(greet())
+      </code></pre>
+      <a href="script.py" target="_blank">Bekijk script →</a>
     </div>
-  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:jouw@email.com">jouw@email.com</a></p>
+    <p>🌍 <a href="https://github.com/jouwgebruikersnaam" target="_blank">Mijn GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 - Gemaakt met ❤️ en Python</p>
+  </footer>
 </body>
 </html>
