@@ -2,10 +2,117 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Mijn eerste GitHub pagina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Eerste Website</title>
+  <style>
+    .about-button 
+    {
+      background: none;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 25px;
+      font-size: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: opacity 0.2s;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      box-shadow: -5px 5px 0 rgba(88, 88, 88, 0.1);
+      vertical-align: top;
+    }
+
+    .about-button:hover
+    {
+      opacity: 0.7;
+    }
+
+    .about-button:active
+    {
+      opacity: 0.3;
+    }
+
+    .GitHub-button
+    {
+      background: none;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: opacity 0.2s, box-shadow 0.2s;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      box-shadow: -5px 5px 0 rgb(88, 88, 88, 0.1);
+      vertical-align: top;
+    }
+
+    .GitHub-button:hover
+    {
+      opacity: 0.7;
+    }
+
+    .GitHub-button:active
+    {
+      opacity: 0.3;
+    }
+
+    .header
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    
+    .left-buttons
+    {
+      display: flex;
+      gap: 10px;
+    }
+
+    .title-block
+    {
+      text-align: center;
+    }
+
+    .title
+    {
+      font-family: Arial;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      flex: 1;
+    }
+
+    .made-text
+    {
+      font-family: Arial;
+      font-size: 10px;
+      font-weight: bold;
+      margin: 5px 0 0 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hallo wereld!</h1>
-  <p>Dit is mijn eerste website op GitHub Pages.</p>
+  <div class="header">
+    <div class="left-buttons">
+      <button class="about-button">ABOUT</button>
+      <button class="GitHub-button">GITHUB</button>
+    </div>
+
+    <div class="title-block">
+      <p class="title">&#183; Welcome on my first website! &#183;</p>
+      <p class="made-text">Made By Nick</p>
+    </div>
+  </div>
 </body>
 </html>
