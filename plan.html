@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Planning - Survival Game</title>
+    <style>
+        /* Basisstijl voor leesbaarheid */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        /* Stijl voor de Fasen (details/summary) */
+        details {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #e9ecef;
+            border-radius: 8px 8px 0 0;
+            user-select: none; /* Voorkom selectie van de tekst bij klikken */
+        }
+
+        /* Container voor de inhoud van de Fasen */
+        .fase-content {
+            padding: 15px;
+        }
+
+        /* Lijststijl voor de taken */
+        .taken-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .taken-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Stijl voor afgevinkte taken */
+        .taken-list input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .resultaat, .doel, .bronnen {
+            margin-top: 10px;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            background-color: #f8f9fa;
+        }
+
+        .doel { border-color: #28a745; }
+        .resultaat { border-color: #ffc107; }
+
+        /* Stijl voor de bronnen sectie */
+        .bronnen {
+            margin-top: 30px;
+            border: none;
+            border-top: 2px dashed #ccc;
+        }
+        .bronnen ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Survival Game Project Planning</h1>
+
+    <details open>
+        <summary>Fase 1 – Opzet & Basisbeweging (week 1–2)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> speler beweegt en camera volgt.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t1-1"><label for="t1-1">Tilemap met gras/grond maken</label></li>
+                <li><input type="checkbox" id="t1-2"><label for="t1-2">Player-node aanmaken (CharacterBody2D)</label></li>
+                <li><input type="checkbox" id="t1-3"><label for="t1-3">Input instellen (WASD / pijltjestoetsen)</label></li>
+                <li><input type="checkbox" id="t1-4"><label for="t1-4">Camera2D toevoegen, “current = on”</label></li>
+                <li><input type="checkbox" id="t1-5"><label for="t1-5">CollisionShapes toevoegen (muren, bomen)</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Een mannetje dat soepel over de map loopt, met botsingen en camera-volgfunctie.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 2 – Gevaar & Interactie (week 3–5)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> vijanden en basisgevechten.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t2-1"><label for="t2-1">Enemy maken (CharacterBody2D)</label></li>
+                <li><input type="checkbox" id="t2-2"><label for="t2-2">script: beweegt naar speler toe (navmesh of vectorrichting)</label></li>
+                <li><input type="checkbox" id="t2-3"><label for="t2-3">Health-systeem voor speler en vijanden</label></li>
+                <li><input type="checkbox" id="t2-4"><label for="t2-4">Wapen toevoegen (zwaard, bijl of projectiel)</label></li>
+                <li><input type="checkbox" id="t2-5"><label for="t2-5">Animaties (idle, walk, attack)</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Speler kan vechten met vijanden, health verliest, en vijanden sterven.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 3 – Wereld en resources (week 6–8)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> verzamelen en omgeving uitbreiden.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t3-1"><label for="t3-1">Tileset uitbreiden (gras, water, bomen, stenen)</label></li>
+                <li><input type="checkbox" id="t3-2"><label for="t3-2">“Interactables” maken (bijv. boom, rots)</label></li>
+                <li><input type="checkbox" id="t3-3"><label for="t3-3">Resource drops (hout, steen) bij vernietiging</label></li>
+                <li><input type="checkbox" id="t3-4"><label for="t3-4">Pick-up systeem (resources in inventaris)</label></li>
+                <li><input type="checkbox" id="t3-5"><label for="t3-5">Simpele HUD voor health & inventory count</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Je kunt bomen hakken, resources krijgen, en je voorraden zien.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 4 – Inventaris & Crafting (week 9–12)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> speler kan items beheren en nieuwe dingen maken.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t4-1"><label for="t4-1">Inventarissysteem bouwen (list/array met slots)</label></li>
+                <li><input type="checkbox" id="t4-2"><label for="t4-2">User interface maken met GridContainer voor items</label></li>
+                <li><input type="checkbox" id="t4-3"><label for="t4-3">Crafting-menu toevoegen (bijv. hout + steen = bijl)</label></li>
+                <li><input type="checkbox" id="t4-4"><label for="t4-4">Simpele opslag (opslaan in JSON-file)</label></li>
+                <li><input type="checkbox" id="t4-5"><label for="t4-5">Later uitbreiding naar cloud bijvoorbeeld firebase</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Volwaardige inventaris waar je dingen kan craften of verwijderen.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 5 – Dag/Nacht en survivalmechanieken (week 13–16)</summary>
+        <div class="fase-content">
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t5-1"><label for="t5-1">Dag/nacht cyclus (licht overlay of WorldEnvironment)</label></li>
+                <li><input type="checkbox" id="t5-2"><label for="t5-2">Energy-, hunger- of thirst-balken</label></li>
+                <li><input type="checkbox" id="t5-3"><label for="t5-3">Tijdsverloop (clock-systeem)</label></li>
+                <li><input type="checkbox" id="t5-4"><label for="t5-4">Basisschuilplaats bouwen (structures plaatsen)</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Je moet eten, rusten, en kan kleine huisjes bouwen.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 6 – Werelduitbreiding & sfeer (week 17–20)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> de wereld levend maken.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t6-1"><label for="t6-1">Nieuwe biomes (bos, woestijn, sneeuw)</label></li>
+                <li><input type="checkbox" id="t6-2"><label for="t6-2">Meer vijanden met gedragspatronen</label></li>
+                <li><input type="checkbox" id="t6-3"><label for="t6-3">Geluid & muziek toevoegen</label></li>
+                <li><input type="checkbox" id="t6-4"><label for="t6-4">Particle-effects (regen, vuur, rook)</label></li>
+                <li><input type="checkbox" id="t6-5"><label for="t6-5">Lichtsystemen (fakkels, kampvuren)</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Een sfeervolle wereld met variatie en geluid.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 7 – Save/Load systeem (week 21–22)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> voortgang opslaan.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t7-1"><label for="t7-1">Savegame als JSON of binary opslaan</label></li>
+                <li><input type="checkbox" id="t7-2"><label for="t7-2">Positie speler, inventaris, wereldstatus bewaren</label></li>
+                <li><input type="checkbox" id="t7-3"><label for="t7-3">Load-functie toevoegen bij start</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Game onthoudt je voortgang en laadt correct terug.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 8 – Balans & polish (week 23–26)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> alles afwerken, bugs fixen en uitbalanceren.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t8-1"><label for="t8-1">Enemy balancing (damage, snelheid)</label></li>
+                <li><input type="checkbox" id="t8-2"><label for="t8-2">Crafting kosten afstemmen</label></li>
+                <li><input type="checkbox" id="t8-3"><label for="t8-3">User Interface verbeteren (knoppen, icons, geluiden)</label></li>
+                <li><input type="checkbox" id="t8-4"><label for="t8-4">Spel testen op pc en exporteren naar web of Android</label></li>
+            </ul>
+            <div class="resultaat"><strong>Resultaat:</strong> Een complete survivalgame die soepel speelt, met een duidelijke start en einddoel.</div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Fase 9 – Extra uitbreidingen (optioneel)</summary>
+        <div class="fase-content">
+            <div class="doel"><strong>Doel:</strong> Als hij tijd of inspiratie heeft.</div>
+            <h3>Taken</h3>
+            <ul class="taken-list">
+                <li><input type="checkbox" id="t9-1"><label for="t9-1">Multiplayer (Godot networking)</label></li>
+                <li><input type="checkbox" id="t9-2"><label for="t9-2">Quests/missies</label></li>
+                <li><input type="checkbox" id="t9-3"><label for="t9-3">NPC-handel</label></li>
+                <li><input type="checkbox" id="t9-4"><label for="t9-4">Procedural map generation</label></li>
+                <li><input type="checkbox" id="t9-5"><label for="t9-5">Steam release</label></li>
+            </ul>
+        </div>
+    </details>
+
+    <div class="bronnen">
+        <h2>Handige Bronnen</h2>
+        <ul>
+            <li><strong>Tutorials:</strong> HeartBeast (fantastische Godot tutorials), GDQuest, Clear Code</li>
+            <li><strong>Assets:</strong> itch.io (free assets), Kenney.nl, OpenGameArt.org</li>
+        </ul>
+    </div>
+
+</body>
+</html>
