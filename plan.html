@@ -79,6 +79,29 @@
             padding-left: 20px;
         }
     </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        // 1. Laden van de opgeslagen status
+        checkboxes.forEach(checkbox => {
+            const taskId = checkbox.id;
+            const isChecked = localStorage.getItem(taskId) === 'true';
+            if (isChecked) {
+                checkbox.checked = true;
+            }
+        });
+
+        // 2. Opslaan van de nieuwe status bij klikken
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const taskId = e.target.id;
+                // Sla 'true' of 'false' op in de lokale opslag van de browser
+                localStorage.setItem(taskId, e.target.checked);
+            });
+        });
+    });
+    </script>
 </head>
 <body>
 
